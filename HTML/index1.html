@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../CSS/style1.css">
+    <title>Kaooa Board Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../JS/jquery.line.js"></script>
+
+<body>
+    <div id="outer">
+        <div id="vulture" data-tilt>
+            <div class="vul" id="0" draggable="true" ondragstart="drag(event)"></div>
+            <div class="captured_crow" id="cc1" style="visibility: hidden; background-color: rgb(158, 6, 6);"></div>
+            <div class="captured_crow" id="cc2" style="visibility: hidden; background-color: rgb(158, 6, 6);"></div>
+            <div class="captured_crow" id="cc3" style="visibility: hidden; background-color: rgb(158, 6, 6);"></div>
+            <div class="captured_crow" id="cc4" style="visibility: hidden; background-color: rgb(158, 6, 6);"></div>
+        </div>
+        <div id="star">
+            <div class="star_obj" id="p1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="star_obj" id="p2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="star_obj" id="p3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="star_obj" id="p4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="star_obj" id="p5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="star_obj" id="p6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="star_obj" id="p7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="star_obj" id="p8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="star_obj" id="p9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="star_obj" id="p10" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <!-- p4 p5 -->
+            <div id="line3"></div>
+            <!-- p4 p6 -->
+            <div id="line4"></div>
+            <!-- p5 p7 -->
+            <div id="line5"></div>
+            <!-- p7 p8 -->
+            <div id="line8"></div>
+            <!-- p6 p8 -->
+            <div id="line9"></div>
+            <!-- p8 p9 -->
+            <div id="line11"></div>
+            <!-- p8 p10 -->
+            <div id="line12"></div>
+            <!-- p1 p10 -->
+            <div id="line14"></div>
+            <!-- p1 p9 -->
+            <div id="line15"></div>
+        </div>
+        <div id="crows" data-tilt>
+            <div class="crow_obj" id="1" draggable="true" ondragstart="drag(event)"></div>
+            <div class="crow_obj" id="2" draggable="true" ondragstart="drag(event)"></div>
+            <div class="crow_obj" id="3" draggable="true" ondragstart="drag(event)"></div>
+            <div class="crow_obj" id="4" draggable="true" ondragstart="drag(event)"></div>
+            <div class="crow_obj" id="5" draggable="true" ondragstart="drag(event)"></div>
+            <div class="crow_obj" id="6" draggable="true" ondragstart="drag(event)"></div>
+            <div class="crow_obj" id="7" draggable="true" ondragstart="drag(event)"></div>
+        </div>
+    </div>
+    <div id="messages">
+        <div class="msg_div" id="v_turn" style="visibility: hidden;">Turn => VULTURE</div>
+        <div class="msg_div" id="v_won" style="visibility: hidden;"><b>VULTURE WON!!</b></div>
+        <div class="msg_div" id="c_won" style="visibility: hidden;"><b>CROWS WON!!</b></div>
+        <div class="msg_div" id="c_turn" style="visibility: visible;">Turn => CROWS</div>
+    </div>
+    <script src="../JS/script.js"></script>
+    <script src="../JS/tilt.min.js" ></script>
+</body>
+
+</html>
